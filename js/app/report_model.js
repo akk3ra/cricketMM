@@ -1,4 +1,4 @@
-Cricket.Report = Ember.Model.extend({
+Cricket.Report = DS.Model.extend({
 
 	id: DS.attr('string'),
 	matchName: DS.attr('string'),
@@ -10,9 +10,9 @@ Cricket.Report = Ember.Model.extend({
 	stats: DS.attr('stats'),
 	readableTime: function(){
 			// Code to make the time into readable format
-			return Moment(this.get('matchTime')).fromTime();
+			return Moment(this.get('matchTime')).fromNow();
 
-	}.property('matchTime').cacheable();
+	}.property('matchTime').cacheable()
 	
 });
 
