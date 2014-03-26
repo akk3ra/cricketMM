@@ -8,7 +8,7 @@ Cricket.Report = DS.Model.extend({
 	matchTime: DS.attr('date'),
 	venue: DS.attr('string'),
 	stats: DS.attr('stats'),
-	computeReadableTime: function(){
+	readableTime: function(){
 			// Code to make the time into readable format
 			return Moment(this.get('matchTime')).fromNow();
 
@@ -19,10 +19,10 @@ Cricket.Report = DS.Model.extend({
 
 Cricket.Stats = Ember.Object.extend({
 	id: DS.attr('string'),
-	teamA: DS.hasMany('mainStat',{async: true}),
-	teamB: DS.hasMany('mainStat',{async: true}),
 	matchResult: DS.attr('string'),
-	matchComplete: DS.attr('string')
+	matchComplete: DS.attr('string'),
+	teamA: DS.hasMany('mainStat'),
+	teamB: DS.hasMany('mainStat')
 });
 
 Cricket.MainStat = Ember.Object.extend({
@@ -33,8 +33,29 @@ Cricket.MainStat = Ember.Object.extend({
 });
 
 Cricket.BatStat = Ember.Object.extend({
-
+	bowlerId: DS.attr('string'),
+	bowlerName: DS.attr('string'),
+	strikes: DS.hasMany('currContext')
 	
+});
+
+Cricket.CurrContext = Ember.Object.extend({
+	id: DS.attr('int'),
+	deliveryType: DS.attr('string'),
+	batsmanResponse: DS.attr('string'),
+	runsScored: DS.attr('int'),
+	shotStyle: DS.attr('string')
 });
 Cricket.Report.FIXTURES = [
 ]
+
+
+
+
+
+
+
+
+
+
+
