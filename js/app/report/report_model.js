@@ -46,8 +46,6 @@ Cricket.CurrContext = Ember.Object.extend({
 	runsScored: DS.attr('int'),
 	shotStyle: DS.attr('string')
 });
-Cricket.Report.FIXTURES = [
-]
 
 
 

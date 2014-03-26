@@ -16,6 +16,9 @@ Cricket.Router.map(function(){
 	this.route('players', {path: '/players'});
 });
 
+//This will be used until we get a REST service
 Cricket.Store = DS.Store.extend({
 	adapter: DS.FixtureAdapter
 });
+
+
