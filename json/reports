@@ -1,10 +1,11 @@
 {
 	"reports": 
-		[{id: 'Match_03-25-2014_10_45AM',
-		"matchName": 'Practice_Match_1',
-		"firstBatting": 'teamA',
-		"matchTime": '03-25-2014_10:45AM',
-		"venue": 'Minneapolis',
+		[
+		{"id": "Match_03-25-2014_10_45AM",
+		"matchName": "Practice_Match_1',
+		"firstBatting": "teamA",
+		"matchTime": "03-25-2014_10:45AM",
+		"venue": "Minneapolis",
 		"stats": {
 					"id": 'Stats_03-25-2014_10:45AM',
 					"matchResult": 'teamA wins',
@@ -103,9 +104,7 @@
 													]	
 										}
 						],
-					"teamB": [
-								{}
-							]
+					"teamB": []
 
 				}
 		}]

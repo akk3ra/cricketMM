@@ -27,5 +27,6 @@ Cricket.Store = DS.Store.extend({
 });
 
 DS.RESTAdapter.reopen({
-	host: 'http://localhost:8088/json'
+	host: 'http://localhost:8088',
+	namespace: 'json' // This will generate http://localhost:8088/json
 });
