@@ -14,11 +14,17 @@ Cricket.Router.map(function(){
 	this.route('login', {path: '/login'});
 	this.route('home', {path: '/home'});
 	this.route('players', {path: '/players'});
+	this.route('report', {path: '/reports'});
+	this.route('matches', {path: '/matches'});
+	this.route('playerCategory', {path: '/playerCategory'});
+	this.route('playerReports', {path: '/playerReports'});
 });
 
 //This will be used until we get a REST service
 Cricket.Store = DS.Store.extend({
-	adapter: DS.FixtureAdapter
+	adapter: DS.RESTAdapter
 });
 
-
+DS.RESTAdapter.reopen({
+	host: 'http://localhost:8088/json'
+});

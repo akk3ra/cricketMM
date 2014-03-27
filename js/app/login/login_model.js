@@ -2,7 +2,7 @@ Cricket.CricketLogin = DS.Model.extend({
 	userId: DS.attr('string'),
 	password: DS.attr('string')
 });
-Cricket.CricketLogin.FIXTURES = [{id: 'a',
+/*Cricket.CricketLogin.FIXTURES = [{id: 'a',
 								 userId: 'a', 
 								 password: 'a'
 								},
@@ -13,4 +13,4 @@ Cricket.CricketLogin.FIXTURES = [{id: 'a',
 								{id: 'sandeep.aks@gmail.com',
 								 userId: 'sandeep.aks@gmail.com', 
 								 password: 'Password1'
-								}];
+								}];*/

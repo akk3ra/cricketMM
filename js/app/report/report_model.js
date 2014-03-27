@@ -12,7 +12,7 @@ Cricket.Report = DS.Model.extend({
 			// Code to make the time into readable format
 			return Moment(this.get('matchTime')).fromNow();
 
-	}.property('matchTime').cacheable()
+	}.property('matchTime')
 	
 });
 
@@ -21,21 +21,21 @@ Cricket.Stats = Ember.Object.extend({
 	id: DS.attr('string'),
 	matchResult: DS.attr('string'),
 	matchComplete: DS.attr('string'),
-	teamA: DS.hasMany('mainStat'),
-	teamB: DS.hasMany('mainStat')
+	teamA: DS.hasMany('mainStat', {async: true}),
+	teamB: DS.hasMany('mainStat', {async: true})
 });
 
 Cricket.MainStat = Ember.Object.extend({
 	batsmanId: DS.attr('string'),
 	batsmanName: DS.attr('string'),
 	ballsPlayed: DS.attr('string'),
-	batStat: DS.hasMany('batStat')
+	batStat: DS.hasMany('batStat', {async: true})
 });
 
 Cricket.BatStat = Ember.Object.extend({
 	bowlerId: DS.attr('string'),
 	bowlerName: DS.attr('string'),
-	strikes: DS.hasMany('currContext')
+	strikes: DS.hasMany('currContext', {async: true})
 	
 });
 

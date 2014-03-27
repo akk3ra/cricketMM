@@ -1,4 +1,4 @@
-Cricket.LoginController = Ember.ObjectController.extend({
+Cricket.LoginController = Ember.Controller.extend({
 	userEmail: null,
 	userPassword: null,
 	//content: [],
