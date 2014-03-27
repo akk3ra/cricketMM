@@ -1,25 +1,16 @@
 Cricket.Report = DS.Model.extend({
-
-	id: DS.attr('string'),
 	matchName: DS.attr('string'),
 	//teamA: DS.hasMany('player', {async: true}),
 	//teamB: DS.hasMany('player', {async: true}),
 	firstBatting: DS.attr('string'),
-	matchTime: DS.attr('date'),
+	matchTime: DS.attr('string'),
 	venue: DS.attr('string'),
-	stats: DS.belongsTo('stats', {embedded: true})
-	//readableTime: function(){
-			// Computed property to make the time into readable format
-			//return Moment(this.get('matchTime')).fromNow();
-
-	//}.property('matchTime')
-	
+	//stats: DS.belongsTo('stats', {embedded: true})
 });
 
 
 
 Cricket.Stats = DS.Model.extend({
-	id: DS.attr('string'),
 	matchResult: DS.attr('string'),
 	matchComplete: DS.attr('string'),
 	teamA: DS.hasMany('mainStat', {async: true, embedded: true}),
@@ -41,7 +32,6 @@ Cricket.BatStat = DS.Model.extend({
 });
 
 Cricket.CurrContext = DS.Model.extend({
-	id: DS.attr('number'),
 	deliveryType: DS.attr('string'),
 	batsmanResponse: DS.attr('string'),
 	runsScored: DS.attr('number'),
