@@ -11,10 +11,10 @@ Cricket.LoginController = Ember.Controller.extend({
 		console.log('User id-->>'+userId+' , Password-->>'+pwd);
 		//this.set('userEmail', null);
 		//this.set('userPassword', null);
-		console.log("Reached.....");
 		//Get hold of the current controllers context to use later
 		var currController = this;
 		var content = this.get('content');
+		console.log("content-->>"+content);
 		var userPresent = false;
 		content.forEach(function(loginCred){
 			console.log("userid from DB...."+loginCred.id);

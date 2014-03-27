@@ -1,6 +1,10 @@
 {
-	"cricketLogins": {"id": "a",
-								 "userId": "a", 
-								 "password": "a"
-								}
+	"cricketLogins": [{"id": "a",
+					  "userId": "a", 
+					  "password": "a"
+					  },
+					  {"id": "sandeep.aks@gmail.com",
+					  "userId": "sandeep.aks@gmail.com", 
+					  "password": "a"
+					  }]
 }
