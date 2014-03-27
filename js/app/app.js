@@ -1,5 +1,6 @@
 var Cricket = Ember.Application.create({
-	LOG_TRANSITIONS: true
+	LOG_TRANSITIONS: true,
+	LOG_TRANSITIONS_INTERNAL: true
 });
 
 
@@ -17,7 +18,7 @@ Cricket.Router.map(function(){
 	this.route('report', {path: '/reports'});
 	this.route('matches', {path: '/matches'});
 	this.route('playerCategory', {path: '/playerCategory'});
-	this.route('playerReports', {path: '/playerReports'});
+	this.route('playerReport', {path: '/playerReports'});
 });
 
 //This will be used until we get a REST service
