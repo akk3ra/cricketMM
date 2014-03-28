@@ -1,3 +1,4 @@
+
 Cricket.Report = DS.Model.extend({
 	matchName: DS.attr('string'),
 	//teamA: DS.hasMany('player', {async: true}),
@@ -5,33 +6,31 @@ Cricket.Report = DS.Model.extend({
 	firstBatting: DS.attr('string'),
 	matchTime: DS.attr('string'),
 	venue: DS.attr('string'),
-	//stats: DS.belongsTo('stats', {embedded: true})
+	stat: DS.belongsTo('stat', {embedded: 'always'})
 });
-
-
-
-Cricket.Stats = DS.Model.extend({
+Cricket.Stat = DS.Model.extend({
 	matchResult: DS.attr('string'),
 	matchComplete: DS.attr('string'),
-	teamA: DS.hasMany('mainStat', {async: true, embedded: true}),
-	teamB: DS.hasMany('mainStat', {async: true, embedded: true})
+	mainStats: DS.hasMany('mainStat', {async: true, embedded: 'always'}),
+	//teamB: DS.hasMany('mainStat', {async: true, embedded: 'always'})
 });
-
+// Here MainStat Model represents the batsman for both the teams.
+//Do not get confused if you do not have teamA and teamB separately.
 Cricket.MainStat = DS.Model.extend({
 	batsmanId: DS.attr('string'),
 	batsmanName: DS.attr('string'),
 	ballsPlayed: DS.attr('number'),
-	batStat: DS.hasMany('batStat', {async: true, embedded: true})
+	batStats: DS.hasMany('batStat', {async: true, embedded: 'always'})
 });
-
 Cricket.BatStat = DS.Model.extend({
 	bowlerId: DS.attr('string'),
 	bowlerName: DS.attr('string'),
-	strikes: DS.hasMany('currContext', {async: true, embedded: true})
+	strikes: DS.hasMany('strike', {async: true, embedded: 'always'})
 	
 });
-
-Cricket.CurrContext = DS.Model.extend({
+Cricket.Strike = DS.Model.extend({
+	//bowlerId: DS.attr('string'),
+	//bowlerName: DS.attr('string'),
 	deliveryType: DS.attr('string'),
 	batsmanResponse: DS.attr('string'),
 	runsScored: DS.attr('number'),

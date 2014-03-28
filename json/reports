@@ -5,64 +5,110 @@
 				"firstBatting": "teamA",
 				"matchTime": "03-25-2014_10_45AM",
 				"venue": "Minneapolis",
-				"stats": {
-							"id": "Stats_03-25-2014_10_45AM",
-							"matchResult": "teamA wins",
-							"matchComplete": true,
-							"teamA": [{
-											"id": "akkeera",
-											"batsmanId": "akkeera",
-											"batsmanName": "Sandeep Akkeera",
-											"ballsPlayed": 25,
-											"batStat": [{"id": "mathi",
-														"bowlerId": "mathi",
-														"bowlerName": "Pradeep Mathi",
-														"strikes": [{
-																 		"id": 1,
-																 		"deliveryType": "Full Length",
-																 		"batsmanResponse": "Played",
-																 		"runsScored": 2,
-																 		"shotStyle": "Straight Play"
-																	},{
-																 		"id": 2,
-																 		"deliveryType": "Full Length",
-																 		"batsmanResponse": "Played",
-																 		"runsScored": 2,
-																 		"shotStyle": "Straight Play"
-
-																		}]
-														}]
-
-									},
-									{
-											"id": "annavarapu",
-											"batsmanId": "annavarapu",
-											"batsmanName": "Rakesh Annavarapu",
-											"ballsPlayed": 25,
-											"batStat": [{"id": "mathi",
-														"bowlerId": "mathi",
-														"bowlerName": "Pradeep Mathi",
-														"strikes": [{
-																 		"id": 1,
-																 		"deliveryType": "Full Length",
-																 		"batsmanResponse": "Played",
-																 		"runsScored": 2,
-																 		"shotStyle": "Straight Play"
-																	}, {
-																 		"id": 2,
-																 		"deliveryType": "Full Length",
-																 		"batsmanResponse": "Played",
-																 		"runsScored": 2,
-																 		"shotStyle": "Straight Play"
-
-																		}]
-														}]
-
-								}],
-
-							"teamB": []
-
-						}
+				"stat": "Stats_03-25-2014_10_45AM"
 				}
-			]
+			],
+	"stats": [{
+				"id": "Stats_03-25-2014_10_45AM",
+				"matchResult": "teamA wins",
+				"matchComplete": "true",
+				"mainStats": ["akkeera","annavarapu"]
+			}],
+	"mainStats": [{
+				"id": "akkeera",
+				"batsmanId": "akkeera",
+				"batsmanName": "Sandeep Akkeera",
+				"ballsPlayed": 25,
+				"batStats": ["akkeeramathi", "akkeeravallem"]
+
+			},
+			{
+				"id": "annavarapu",
+				"batsmanId": "annavarapu",
+				"batsmanName": "Rakesh Annavarapu",
+				"ballsPlayed": 25,
+				"batStats": ["annavarapumathi", "annavarapuvallem"]
+
+			}],
+	"batStats": [{"id": "akkeeramathi",
+				"bowlerId": "mathi",
+				"bowlerName": "Pradeep Mathi",
+				"strikes": ["akkeeramathi1", "akkeeramathi2"]
+				},
+				{"id": "akkeeravallem",
+				"bowlerId": "mathi",
+				"bowlerName": "Pradeep Mathi",
+				"strikes": ["akkeeravallem1", "akkeeravallem2"]
+				},
+				{"id": "annavarapuvallem",
+				"bowlerId": "mathi",
+				"bowlerName": "Pradeep Mathi",
+				"strikes": ["annavarapuvallem1", "annavarapuvallem2"]
+				},
+				{"id": "annavarapumathi",
+				"bowlerId": "mathi",
+				"bowlerName": "Pradeep Mathi",
+				"strikes": ["annavarapumathi1","annavarapumathi2"]
+			}
+			],
+	"strikes": [{
+				"id": "akkeeramathi1",
+				"deliveryType": "Full Length",
+				"batsmanResponse": "Played",
+				"runsScored": 2,
+				"shotStyle": "Straight Play"
+			},
+			{
+				"id": "akkeeramathi2",
+				"deliveryType": "Full Length",
+				"batsmanResponse": "Played",
+				"runsScored": 2,
+				"shotStyle": "Straight Play"
+
+			},
+			{
+				"id": "annavarapumathi1",
+				"deliveryType": "Full Length",
+				"batsmanResponse": "Played",
+				"runsScored": 2,
+				"shotStyle": "Straight Play"
+			},
+			{
+				"id": "annavarapumathi2",
+				"deliveryType": "Full Length",
+				"batsmanResponse": "Played",
+				"runsScored": 2,
+				"shotStyle": "Straight Play"
+
+			},
+			{
+				"id": "akkeeravallem1",
+				"deliveryType": "Full Length",
+				"batsmanResponse": "Played",
+				"runsScored": 2,
+				"shotStyle": "Straight Play"
+			},
+			{
+				"id": "akkeeravallem2",
+				"deliveryType": "Full Length",
+				"batsmanResponse": "Played",
+				"runsScored": 2,
+				"shotStyle": "Straight Play"
+
+			},
+			{
+				"id": "annavarapuvallem1",
+				"deliveryType": "Full Length",
+				"batsmanResponse": "Played",
+				"runsScored": 2,
+				"shotStyle": "Straight Play"
+			},
+			{
+				"id": "annavarapuvallem2",
+				"deliveryType": "Full Length",
+				"batsmanResponse": "Played",
+				"runsScored": 2,
+				"shotStyle": "Straight Play"
+
+			}]
 }
